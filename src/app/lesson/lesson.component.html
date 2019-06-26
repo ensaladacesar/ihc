@@ -1,0 +1,54 @@
+<div>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-7">
+            <h4>Primera leccion: Que es sincronia</h4>
+            <p>La programación asíncrona nos da la capacidad de “diferir” la ejecución de una función a la espera de que se complete una operación, normalmente de I/O (red, disco duro, …), y así evitar bloquear la ejecución hasta que se haya completado la tarea en cuestión. Esto es posible gracias a que las funciones son ciudadanos de primer nivel (first-class citizens) y pueden ser pasadas como argumentos de otras funciones tal cual lo haríamos con las variables.</p>
+            <h4>Ejemplo de una funcion sincrona</h4>
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <img src="../../assets/capt1.png">
+                </div>
+                <div class="col-md-6 text-center">
+                    <div class="term">
+                        <span id="testCode1"></span>
+                    </div>
+                    
+                    <button class="btn btn-primary" (click)="lesson1()">Probar codigo</button>
+                </div>
+            </div>
+            <h4>Ejemplo de una funcion asincrona</h4>
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <img src="../../assets/capt2.png">
+                </div>
+                <div class="col-md-6 text-center">
+                    <div class="term">
+                        <span id="testCode2"></span>
+                    </div>
+                    <button class="btn btn-primary" (click)="lesson2()">Probar codigo</button>
+                </div>
+            </div>
+            <h4>ejecución asincrona natural</h4>
+            <div class="row">
+                <div class="col-md-8 text-center">
+                    <img src="../../assets/capt3.png" class="img-fluid">
+                </div>
+                <div class="col-md-4 text-left">
+                    <div class="term">
+                        <span id="testCode3"></span>
+                    </div>
+                    
+                    <button class="btn btn-primary" (click)="lesson3()">Probar codigo</button>
+                </div>
+            </div>
+            <br>
+            <p>El resultado de ejecutar este código puede desconcertar un poco, ya que si fuera un código síncrono esperaríamos ver los mensajes STAR y END uno detrás de otro y terminados por COMPLETED, pero al ser un código asíncrono el resultado es completamente diferente.</p><br>
+            <p>Lo que ha pasado es que se ha ejecutado el bucle for con cada una de las llamadas a asynSqrt() y directamente se ha pasado a ejecutar el mensaje COMPLETED, ya que todas las llamadas a nuestra función se ejecutan de forma asíncrona. Los resultados de esta ejecución no siguen ningún orden, ya que cada una de estas llamadas concluye sin respetar el orden de llamada.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6"></div>
+        <div class="col-md-6"></div>
+    </div>
+</div>
